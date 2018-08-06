@@ -19,11 +19,10 @@ class BooksApp extends React.Component {
   }
 
   /* update array data when a book is moved to different shelf */
-  changeShelf = (book, shelf) => {
-    BooksAPI.getAll().then((books) => {
-      this.setState({ books: books })
-    })
-    BooksAPI.update(book, shelf);
+  changeShelf = async (book, shelf) => {
+    await BooksAPI.update(book, shelf);
+    const books = await BooksAPI.getAll();
+    this.setState({ books });
   }
 
   /* render component */
