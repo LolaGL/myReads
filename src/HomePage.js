@@ -14,7 +14,7 @@ class HomePage extends Component {
         <div className="list-books-content">
           <div>
 
-            {/* shelf 1: currently reading */}
+            {/* shelf 1, currently reading */}
             <div className="bookshelf">
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
@@ -28,7 +28,7 @@ class HomePage extends Component {
                     <li key={book.id} >
                       <Book
                         book={book}
-                        moveShelf={this.props.moveShelf}
+                        changeShelf={this.props.changeShelf}
                         currentShelf="currentlyReading"
                       />
                     </li>
@@ -38,7 +38,7 @@ class HomePage extends Component {
               </div>
             </div>
 
-            {/* shelf 2: want to read */}
+            {/* shelf 2, want to read */}
             <div className="bookshelf">
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
@@ -50,7 +50,7 @@ class HomePage extends Component {
                       <li key={book.id} >
                         <Book
                           book={book}
-                          moveShelf={this.props.moveShelf}
+                          changeShelf={this.props.changeShelf}
                           currentShelf="wantToRead"
                         />
                       </li>
@@ -60,7 +60,7 @@ class HomePage extends Component {
               </div>
             </div>
 
-            {/* shelf 3: read */}
+            {/* shelf 3, read */}
             <div className="bookshelf">
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
@@ -72,7 +72,7 @@ class HomePage extends Component {
                     <li key={book.id} >
                       <Book
                         book={book}
-                        moveShelf={this.props.moveShelf}
+                        changeShelf={this.props.changeShelf}
                         currentShelf="read"
                       />
                     </li>
